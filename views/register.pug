@@ -1,0 +1,35 @@
+extend master
+
+block content
+  form.form
+    center
+      h1  Student Register Form 
+      #error(style="color:red;")
+    .container
+      h1 Register
+      p Please fill in this form to create an account.
+      hr
+      label(for='name')
+        b Name
+      input#name(type='text' placeholder='Enter Name' name='Name')
+      label(for='email')
+        b Email
+      input#email(type='text' placeholder='Enter Email' name='email')
+      label(for='psw')
+        b Password
+      #errorpassword(style="color:red;float:right;")
+      input#psw(type='password' placeholder='Enter Password' name='psw')
+      label(for='psw-repeat')
+        b Repeat Password
+      input#pswrepeat(type='password' placeholder='Repeat Password' name='psw-repeat')
+      hr
+      p By creating an account you agree to our 
+        a(href='#') Terms & Privacy
+        | .
+      input(type='submit' value='Register' name='submit')
+      .container.signin
+        p Already have an account? 
+          a(href='/view/login') Sign in
+          | .
+  script(src="../public/js/register.js")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.22.0/axios.min.js')

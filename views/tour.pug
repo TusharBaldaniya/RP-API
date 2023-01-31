@@ -1,0 +1,14 @@
+extend master
+block content   
+  .row
+    each tour in tours
+      .column
+        br
+        .card
+          p= `${tour.name}`
+          - if(tour.price)
+            p 123
+          - else
+            p 456
+          hr
+

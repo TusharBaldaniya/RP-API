@@ -1,0 +1,22 @@
+extend master
+block content
+  center
+    h1  Student Login Form 
+    #error(style="color:red;")
+  form.form
+    .container
+      label Username : 
+      #erroremail.error
+      input(type='email' placeholder='Enter Username' id='email' name='email')
+      label Password : 
+      #errorpassword.error
+      input(type='password' placeholder='Enter Password' id='password' name='password')
+      input(type='submit' value='submit' name='submit')
+      input(type='checkbox' checked='checked')
+      | Remember me
+      button.cancelbtn(type='button') Cancel
+      | Forgot
+      a(href='#')  password? 
+      p New User? 
+        a(href='/view/register') Sign Up here.
+      script(src="../public/js/login.js")
